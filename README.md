@@ -1,80 +1,57 @@
-# BlastGate
-
-**Autonomous Recovery. Provable Boundaries.**
-
-BlastGate detects an application-stalled ECS worker, asks Amazon Nova Micro through Bedrock AgentCore to investigate, and permits one bounded recovery action only after an independent Lambda broker validates operational rules R1–R8.
-
-An ECS task can remain `RUNNING` while its processing loop has stopped making progress. Restarting everything is risky; letting a model decide its own permissions is riskier. BlastGate separates diagnosis, proposal, authorization, execution, and verification. The model never holds `ecs:StopTask` authority.
-
-## Watch the 2-Minute Demo
-
-*120-second narrated technical walkthrough with burned subtitles. It uses historical recorded AWS evidence, architecture animation, and offline dashboard views; it does not show live AWS telemetry.*
-
 <p align="center">
   <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/">
-    <img src="docs/submission/assets/cover-1200x675.png" alt="Play the BlastGate 2-minute demo" width="760">
+    <img src="docs/submission/assets/cover-1200x675.png" alt="BlastGate — Autonomous recovery. Provable boundaries. Open the two-minute demo." width="760">
   </a>
-  <br>
-  <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/"><strong>▶ Open the full video</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://youtu.be/WtddIVtfIfk">Watch on YouTube</a>
 </p>
 
-## Recorded result
+<p align="center">
+  <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/"><strong>Watch the 2-minute demo</strong></a>
+  &nbsp; · &nbsp;
+  <a href="https://youtu.be/WtddIVtfIfk">YouTube</a>
+  &nbsp; · &nbsp;
+  <a href="docs/submission/GALLERY.md">Evidence gallery</a>
+  &nbsp; · &nbsp;
+  <a href="#run-locally">Run locally</a>
+</p>
 
-The November 25, 2026 unattended run recorded an incident, dispatcher session, broker `ALLOW`, all eight rule flags, the original task stopped, and a distinct replacement publishing healthy telemetry. Cleanup was recorded at **13:36:50 UTC** with **0 desired / 0 running / 0 pending** tasks. This is historical evidence, not current AWS state.
+# BlastGate
 
-The runner does not manually invoke the harness or broker. It **can invoke the watchdog** to accelerate detection. Intermediate stage timestamps and a full model/tool transcript are absent from the compact run JSON. The external Antigravity report contains additional claims; this public presentation uses the available captured evidence and inspected source.
+An ECS worker can be `RUNNING` while its processing loop has stalled. BlastGate asks **Amazon Nova Micro through Bedrock AgentCore** to investigate, then permits one bounded recovery action only after an **independent Lambda broker** validates rules R1–R8. The model never holds `ecs:StopTask` authority.
 
-- [Public recorded evidence](evidence/public/recorded-evidence.json)
-- [Evidence scope and redactions](docs/EVIDENCE.md)
-- [Architecture and trust boundaries](docs/ARCHITECTURE.md)
-- [Setup, tests, deployment and cleanup](docs/REPRODUCTION.md)
-- [Demo walkthrough](docs/DEMO.md)
-- [Security and limitations](docs/SECURITY.md)
-- [Engineering challenges](docs/ENGINEERING.md)
-- [Final validation and release report](docs/FINALIZATION_REPORT.md)
-- [UI refinement and screenshot guide](docs/UI_REFINEMENT_CHANGELOG.md)
-- [Final screenshot gallery](docs/submission/GALLERY.md)
-- [Stage 2 media readiness and video](docs/submission/MEDIA_READINESS_REPORT.md)
-- [Official submission readiness and verified evidence](docs/submission/READINESS_REPORT.md)
+The narrated demo combines historical AWS evidence, architecture animation and offline dashboard views. **It does not show live AWS telemetry.**
 
-## Video materials
+## Recovery, recorded
 
-- **Full-size player:** [Open the full video](https://mdzubair933.github.io/blastgate-autonomous-recovery/)
-- **YouTube:** [Watch the demo](https://youtu.be/WtddIVtfIfk)
-- **Video frames contact sheet:** [docs/submission/assets/final/video-frames/contact-sheet.png](docs/submission/assets/final/video-frames/contact-sheet.png)
-- **Storyboard and narration script:** [docs/submission/video/STORYBOARD.md](docs/submission/video/STORYBOARD.md)
-- **Visual gallery & frame contacts:** [docs/submission/GALLERY.md](docs/submission/GALLERY.md)
-- **Editable video source and local export:** [video project](docs/submission/video/README.md); the original export is preserved locally in `media-exports/blastgate-demo-120s.mp4` and `release/blastgate-stage2-media.zip`.
+The **November 25, 2026** unattended run captured the recovery sequence:
 
-![BlastGate local dashboard displaying sanitized recorded AWS evidence](docs/submission/assets/final/07-recorded-aws-recovery.png)
+| Authorization | Recovery | Cleanup |
+| :--- | :--- | :--- |
+| Broker `ALLOW`; all eight rule flags recorded | Original task stopped; a distinct replacement published healthy telemetry | **0 desired / 0 running / 0 pending** at 13:36:50 UTC |
 
-*Genuine local-dashboard capture. Recorded observations are historical; this is not an AWS Console screenshot or live telemetry.*
+[Inspect the public evidence](evidence/public/recorded-evidence.json) · [Read the evidence scope](docs/EVIDENCE.md)
 
-## Architecture
+![BlastGate dashboard showing sanitized historical AWS recovery evidence](docs/submission/assets/final/07-recorded-aws-recovery.png)
 
-```mermaid
-flowchart TD
-  W[Worker progress and heartbeat] --> WD[Scheduled watchdog]
-  WD --> CW[CloudWatch stalled-worker alarm]
-  CW --> I[EventBridge alarm event / Incident ingestion]
-  I --> DDB[(Incident record)]
-  I --> EB[BlastGate.IncidentOpened / EventBridge]
-  EB --> D[Dispatcher / atomic incident lock]
-  D --> H[AgentCore Managed Harness / Amazon Nova Micro]
-  H --> G[Gateway / Cedar ENFORCE]
-  G --> DIAG[Read-only diagnostics]
-  G --> B[Independent Lambda broker / R1–R8]
-  B --> STATE[(Cooldown / idempotency / audit)]
-  B --> ECS[Scoped ecs:StopTask]
-  ECS --> NEW[ECS service launches replacement]
-  NEW --> W
-```
+*Actual local-dashboard capture of recorded AWS observations. Historical evidence; not an AWS Console screenshot or current AWS state.*
 
-Guardrails and the system prompt constrain model behavior. Cedar restricts caller and tool access. The broker independently evaluates live inventory, application telemetry, capacity, cooldown and catalog scope. IAM limits the available mutation. See [architecture](docs/ARCHITECTURE.md) for source links and the evidence boundary.
+<details>
+<summary><strong>What this run proves — and its limits</strong></summary>
 
-## R1–R8
+The runner does not manually invoke the harness or broker. It **can invoke the watchdog** to accelerate detection. The compact run JSON does not retain intermediate stage timestamps or a full model/tool transcript.
+
+This presentation relies on captured evidence and inspected source. Additional claims in the external Antigravity report are not adopted here. See [the unattended demo](docs/DEMO.md) and [security limitations](docs/SECURITY.md).
+
+</details>
+
+## The agent proposes. The broker decides.
+
+[![BlastGate architecture and independent enforcement boundaries](docs/submission/assets/architecture.svg)](docs/ARCHITECTURE.md)
+
+Guardrails and the system prompt constrain model behavior. **Cedar** restricts caller and tool access. The **broker** independently checks inventory, application telemetry, capacity, cooldown and catalog scope. **IAM** limits the available mutation.
+
+[Explore the architecture and source links](docs/ARCHITECTURE.md) · [Open the full-size diagram](docs/submission/assets/architecture.png)
+
+## Eight operational boundaries
 
 | Rule | Required boundary |
 |---|---|
@@ -87,11 +64,32 @@ Guardrails and the system prompt constrain model behavior. Cedar restricts calle
 | R7 | Agent proposes; only the separately scoped broker executes the approved task stop. |
 | R8 | Atomic reservations, durable idempotency and fail-closed handling under uncertainty. |
 
-The existing [operational contract](contracts/OPERATIONAL_RULES.md) and [threat model](contracts/threat_model.md) remain the detailed specifications. No rule or backend was changed during frontend finalization.
+[Operational contract](contracts/OPERATIONAL_RULES.md) · [Threat model](contracts/threat_model.md)
 
-## Run the dashboard locally
+## Adversarial evidence
 
-Prerequisites: Node.js 24 (or 22.12+) and npm. From PowerShell:
+The public audit separates **model activity, perimeter blocks and direct-service checks**.
+
+- **8 recorded Managed Harness executions:** 5 reached model inference; 3 were blocked before inference.
+- Of the 5, **4 queried diagnostics before outbound Guardrail intervention**. ADV-03 returned a missing-incident response.
+- **Zero unauthorized ECS mutations** were recorded in these evaluations.
+
+[Inspect the prompt-response records and their limits](docs/submission/ADVERSARIAL_EVIDENCE_AUDIT.md)
+
+<details>
+<summary><strong>Earlier tests and capacity-denial evidence</strong></summary>
+
+The original eight Step 7 scenarios are mixed-layer checks, not eight agent prompt-response executions. Reports also cover Step 6 live recovery, post-hardening direct-service verification and the later unattended run.
+
+**Scenario 4 combines a local quorum refusal with an earlier live inventory denial.** It is not a live broker quorum-branch test. A separate post-hardening run captures a live capacity denial.
+
+See [submission readiness](docs/submission/READINESS_REPORT.md) and [the finalization report](docs/FINALIZATION_REPORT.md). Historical private reports are excluded from the curated package because they contain operational identifiers and superseded statements.
+
+</details>
+
+## Run locally
+
+Requires Node.js 24 (or 22.12+) and npm. From PowerShell:
 
 ```powershell
 cd dashboard
@@ -99,7 +97,17 @@ npm ci
 npm run dev -- --hostname 127.0.0.1
 ```
 
-Open [the local dashboard](http://127.0.0.1:3000). Choose **Simulated operations** for interactive fixtures or **Recorded AWS evidence** for captured results. All eight operational sections are available through the sidebar. No AWS credentials are required or consumed by the dashboard.
+Open **[localhost:3000](http://127.0.0.1:3000)** and choose a mode:
+
+| Mode | What you see |
+| :--- | :--- |
+| Simulated operations | Interactive local fixtures |
+| Recorded AWS evidence | Captured historical results |
+
+All eight dashboard sections are available from the sidebar. **No AWS credentials are required or consumed.** The live-data provider is disconnected.
+
+<details>
+<summary><strong>Test and production build</strong></summary>
 
 ```powershell
 npm test
@@ -107,12 +115,30 @@ npm run build
 npm start -- --hostname 127.0.0.1
 ```
 
-The application uses the Next.js server build, not a configured static export. The live-data provider remains deliberately disconnected.
+The dashboard uses the Next.js server build, not a configured static export. Existing test/build results and browser checks are documented in [the finalization report](docs/FINALIZATION_REPORT.md).
 
-## Verification and release status
+For backend setup, deployment and cleanup, follow [the reproduction guide](docs/REPRODUCTION.md).
 
-Historical reports document Step 6 live recovery, eight mixed-layer Step 7 adversarial checks, post-hardening direct-service verification, and the later unattended run. Live adversarial evaluations include 8 recorded Bedrock AgentCore Managed Harness executions: 5 reached model inference (1 complete natural-language refusal in ADV-03 plus 4 diagnostic tool queries followed by outbound Guardrail intervention) and 3 pre-inference perimeter blocks, with zero unauthorized ECS mutations. See [adversarial audit](docs/submission/ADVERSARIAL_EVIDENCE_AUDIT.md). **Scenario 4 combines a local quorum refusal with an earlier live inventory denial**; it is not a live broker quorum-branch test. A separate post-hardening run captures a live capacity denial.
+</details>
 
-Fresh local test/build results and actual browser checks are recorded in [the finalization report](docs/FINALIZATION_REPORT.md). Historical reports are preserved locally and excluded from the curated public package because they contain operational identifiers and superseded statements.
+## Explore the project
 
-The repository is published and open source, licensed under [MIT](LICENSE). Dependencies retain their own licenses. See [release preparation](docs/RELEASE.md).
+| Understand | Verify | Present |
+| :--- | :--- | :--- |
+| [Architecture](docs/ARCHITECTURE.md) | [Evidence and redactions](docs/EVIDENCE.md) | [Screenshot gallery](docs/submission/GALLERY.md) |
+| [Security and limitations](docs/SECURITY.md) | [Adversarial audit](docs/submission/ADVERSARIAL_EVIDENCE_AUDIT.md) | [Submission readiness](docs/submission/READINESS_REPORT.md) |
+| [Engineering challenges](docs/ENGINEERING.md) | [Final validation](docs/FINALIZATION_REPORT.md) | [UI and screenshot guide](docs/UI_REFINEMENT_CHANGELOG.md) |
+| [Reproduction guide](docs/REPRODUCTION.md) | [Release preparation](docs/RELEASE.md) | [Media readiness](docs/submission/MEDIA_READINESS_REPORT.md) |
+
+<details>
+<summary><strong>Video source, storyboard and frames</strong></summary>
+
+- [Storyboard and narration](docs/submission/video/STORYBOARD.md)
+- [Video frames contact sheet](docs/submission/assets/final/video-frames/contact-sheet.png)
+- [Editable video project](docs/submission/video/README.md)
+
+The original export is preserved locally in `media-exports/blastgate-demo-120s.mp4` and `release/blastgate-stage2-media.zip`.
+
+</details>
+
+Licensed under **[MIT](LICENSE)**. Dependencies retain their own licenses.
