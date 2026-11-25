@@ -1,6 +1,6 @@
 # BlastGate submission readiness
 
-**READINESS UPDATE — The mandatory adversarial prompt-response evidence gap is 100% RESOLVED. All local submission assets and verified AWS evidence are prepared. Publication remains held for owner repository push and form submission.**
+**READINESS UPDATE — The mandatory adversarial prompt-response evidence gap is 100% RESOLVED. All local submission assets and verified AWS evidence are prepared. The public GitHub repository is published at https://github.com/MDzubair933/blastgate-autonomous-recovery. Submission assets and verified AWS evidence are ready for AWS Builder Center entry.**
 
 Reviewed November 25, 2026 against the official [About](https://builder.aws.com/build/hackathons/61c39fba-1383-37e7-bd5c-3f9d889d89fc/agents-your-rules-bedrock-managed-agents-build) and [Rules](https://builder.aws.com/build/hackathons/61c39fba-1383-37e7-bd5c-3f9d889d89fc/agents-your-rules-bedrock-managed-agents-build?tab=rules) pages. Deadline: December 2, 2026, 11:59 p.m. Pacific / December 3, 2026, 13:29 IST.
 
@@ -16,7 +16,7 @@ Reviewed November 25, 2026 against the official [About](https://builder.aws.com/
 ## Remaining Owner Actions Before Public Submission
 
 1. **Adversarial prompt requirement:** **RESOLVED** — The 5-prompt requirement (including prompt injection) is verified with authentic AWS Bedrock AgentCore Managed Harness responses.
-2. **Public repository URL:** The draft contains `https://github.com/MDzubair933/blastgate-autonomous-recovery`. Replace with the real repository link once published.
+2. **Public repository URL:** **PUBLISHED** — The public repository is live at [https://github.com/MDzubair933/blastgate-autonomous-recovery](https://github.com/MDzubair933/blastgate-autonomous-recovery).
 3. **Owner eligibility declarations:** Confirm adult/profile/account eligibility and residence/employment/household exclusions per Hackathon terms.
 4. **Builder Center post creation:** Log in to AWS Builder Center, join the hackathon, paste the approved draft from [BUILDER_CENTER_DRAFT.md](BUILDER_CENTER_DRAFT.md), attach images, and submit within the competition window.
 
@@ -34,4 +34,4 @@ Curated source snapshot: `release/blastgate-review/`. Downloadable exact submiss
 
 Package-only validation checks local links, JSON structure, short-description length, image dimensions/size, source-derived prompt/trace values, private identifier patterns, file hashes, ZIP integrity and frozen backend/provider/evidence files. No broad regression suite, backend modification, rule change, infrastructure deployment or UI redesign was performed for this task. See [PACKAGE_VALIDATION.json](PACKAGE_VALIDATION.json) for the completed local check results.
 
-**Decision:** ready for owner review and offline evidence completion; not ready to claim the mandatory five-prompt boundary gate or publish an eligible final entry.
+**Decision:** Publication complete and verified on GitHub; all mandatory hackathon requirements (including the 5+ adversarial prompt evidence) are satisfied; ready for final AWS Builder Center submission.

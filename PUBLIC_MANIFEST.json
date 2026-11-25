@@ -18,8 +18,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "db5a973268c53a99930e084dc1732d9ca0f588b9c03789add662de2866fc9abf",
-      "bytes": 6745
+      "sha256": "8df79e0a15b5737aef97a2911106ef43dde24402f28ee0404b8118d4a6255ab2",
+      "bytes": 7118
     },
     {
       "path": "agentcore/__init__.py",
@@ -518,8 +518,8 @@
     },
     {
       "path": "docs/submission/ADVERSARIAL_EVIDENCE_AUDIT.md",
-      "sha256": "9032c442f25a8dbf243a9c0abad1c31c5728bda56e42fa2541e765aa08e0e114",
-      "bytes": 8278
+      "sha256": "33e6624408b8aa95ff6c89dae5bc634de1a2da69976d5d21cc346de8a1a0359f",
+      "bytes": 8500
     },
     {
       "path": "docs/submission/ASSET_GUIDE.md",
@@ -533,8 +533,8 @@
     },
     {
       "path": "docs/submission/BUILDER_CENTER_DRAFT.md",
-      "sha256": "2a02cd92008313d6e6df0b88e89e95cb8592837e18fb1d1746caeeb8ea79fdbd",
-      "bytes": 16661
+      "sha256": "7e66a1a976680cb1f1d4282b1f9cdae77bf89c197d27636ea1989ec9030b691c",
+      "bytes": 16589
     },
     {
       "path": "docs/submission/BUILDER_CENTER_FIELDS.json",
@@ -558,12 +558,12 @@
     },
     {
       "path": "docs/submission/MEDIA_READINESS_REPORT.md",
-      "sha256": "4157dd7ab256b9d43d4c3f9da54c89b826a74ea00cbce6dcdd8aacc98ee2f134",
-      "bytes": 5393
+      "sha256": "fd98f334758121f84bd540920c8825baf0b0ca1df04063938461f0bf27e3543a",
+      "bytes": 5513
     },
     {
       "path": "docs/submission/MEDIA_VALIDATION.json",
-      "sha256": "1e5f165ff24339d7b6093ab3e66b674d6a56175871d5355813e2890ece65766a",
+      "sha256": "e2312c65efa57fda5198edfd325fc387d758aca9dd0bbf2ab022576d373af4d5",
       "bytes": 1023
     },
     {
@@ -578,8 +578,8 @@
     },
     {
       "path": "docs/submission/READINESS_REPORT.md",
-      "sha256": "db7bea98bd241779985ec98f3a64ccc6da8f97f14f6efbd5485cebf41771ce45",
-      "bytes": 4480
+      "sha256": "22e01d11a399867559aa2cf7967de9b05d3a18af61743dde5e4a4f9b39bd1047",
+      "bytes": 4679
     },
     {
       "path": "docs/submission/REQUIREMENTS_MATRIX.md",

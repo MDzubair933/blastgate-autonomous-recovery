@@ -1,6 +1,6 @@
 # Stage 2 final media readiness
 
-**Media prepared for Antigravity's final delta review. No publication or new AWS execution was performed.**
+**Media prepared and verified. Public GitHub repository published at https://github.com/MDzubair933/blastgate-autonomous-recovery.**
 
 ## Deliverables
 
@@ -11,7 +11,7 @@
 - [Representative video frame contact sheet](assets/final/video-frames/contact-sheet.png), decoded from the finished MP4.
 - [Media provenance and exact hashes](MEDIA_PROVENANCE.json), [GitHub versus Builder Center placement guide](PLACEMENT_GUIDE.md), and local media validation results in `MEDIA_VALIDATION.json`.
 
-Authoritative files were saved in the project source folders before copying public-safe media into `staging/blastgate-autonomous-recovery/docs/submission/`. The refreshed curated source package is `release/blastgate-submission-package.zip`; the video export remains separate. The target repository `MDzubair933/blastgate-autonomous-recovery` was not created or pushed.
+Authoritative files were saved in the project source folders before copying public-safe media into `staging/blastgate-autonomous-recovery/docs/submission/`. The refreshed curated source package is `release/blastgate-submission-package.zip`; the video export remains separate. The target repository `MDzubair933/blastgate-autonomous-recovery` is published and live on GitHub.
 
 `release/blastgate-stage2-media.zip` is a separate media delivery archive containing the MP4, gallery, graphics and editable video source. It is not the proposed GitHub source tree.
 
@@ -29,7 +29,7 @@ Authoritative files were saved in the project source folders before copying publ
 
 1. **Original console/running-session image:** unavailable through the exposed authenticated surfaces. The local recorded-data captures do not remove that distinction. If judges require a contemporaneous running-agent console image, an authentic capture is still needed.
 2. **Stage 1 prose consistency:** some existing submission text describes five explicit in-context refusals, while the saved visible final outputs are four Guardrail blocks and one missing-incident answer among the five model-activity flags. Older status fields also retain prior gap language. Antigravity's final delta review should reconcile that prose/count terminology before publication. This media pass does not rerun the qualification audit or overwrite original evidence.
-3. **Hosting and publication:** the MP4 has no public host and the repository is not created. No GitHub or Builder Center publication occurred. Owner eligibility/originality and editor checks remain outside this media pass.
+3. **Hosting and publication:** The public GitHub repository is live at https://github.com/MDzubair933/blastgate-autonomous-recovery. The MP4 video is preserved offline ready for public hosting. Owner eligibility/originality and editor checks remain outside this media pass.
 
 ## Quality and scope
 

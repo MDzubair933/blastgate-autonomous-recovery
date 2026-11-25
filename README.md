@@ -96,8 +96,8 @@ The application uses the Next.js server build, not a configured static export. T
 
 ## Verification and release status
 
-Historical reports document Step 6 live recovery, eight mixed-layer Step 7 adversarial checks, post-hardening direct-service verification, and the later unattended run. **Scenario 4 combines a local quorum refusal with an earlier live inventory denial**; it is not a live broker quorum-branch test. A separate post-hardening run captures a live capacity denial.
+Historical reports document Step 6 live recovery, eight mixed-layer Step 7 adversarial checks, post-hardening direct-service verification, and the later unattended run. Live adversarial evaluations include 8 recorded Bedrock AgentCore Managed Harness executions: 5 reached model inference (1 complete natural-language refusal in ADV-03 plus 4 diagnostic tool queries followed by outbound Guardrail intervention) and 3 pre-inference perimeter blocks, with zero unauthorized ECS mutations. See [adversarial audit](docs/submission/ADVERSARIAL_EVIDENCE_AUDIT.md). **Scenario 4 combines a local quorum refusal with an earlier live inventory denial**; it is not a live broker quorum-branch test. A separate post-hardening run captures a live capacity denial.
 
 Fresh local test/build results and actual browser checks are recorded in [the finalization report](docs/FINALIZATION_REPORT.md). Historical reports are preserved locally and excluded from the curated public package because they contain operational identifiers and superseded statements.
 
-The source snapshot is prepared for review, **not published**. Licensed under [MIT](LICENSE). Dependencies retain their own licenses. See [release preparation](docs/RELEASE.md).
+The repository is published and open source, licensed under [MIT](LICENSE). Dependencies retain their own licenses. See [release preparation](docs/RELEASE.md).
