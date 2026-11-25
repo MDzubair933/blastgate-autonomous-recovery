@@ -18,8 +18,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "8df79e0a15b5737aef97a2911106ef43dde24402f28ee0404b8118d4a6255ab2",
-      "bytes": 7118
+      "sha256": "620e3fe5117b4da4235512ca9e62179dfe29666efc8243a82e11cc1ab715ed73",
+      "bytes": 7598
     },
     {
       "path": "agentcore/__init__.py",
@@ -533,8 +533,8 @@
     },
     {
       "path": "docs/submission/BUILDER_CENTER_DRAFT.md",
-      "sha256": "7e66a1a976680cb1f1d4282b1f9cdae77bf89c197d27636ea1989ec9030b691c",
-      "bytes": 16589
+      "sha256": "51eff69bb7aa4edd2959c3721ac3ddaf05b9867dcf617c2ce39161cb91ec2e40",
+      "bytes": 17087
     },
     {
       "path": "docs/submission/BUILDER_CENTER_FIELDS.json",
@@ -563,7 +563,7 @@
     },
     {
       "path": "docs/submission/MEDIA_VALIDATION.json",
-      "sha256": "e2312c65efa57fda5198edfd325fc387d758aca9dd0bbf2ab022576d373af4d5",
+      "sha256": "7e5304207dcd7684ff68389a0a8f7f12fbbc19ea03cb9b0b8c072b7247db1261",
       "bytes": 1023
     },
     {

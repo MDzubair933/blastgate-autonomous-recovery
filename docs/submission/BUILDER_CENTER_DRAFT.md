@@ -125,11 +125,18 @@ Finally, evidence presentation itself needed hardening. Synthetic UI fixtures, l
 - Costs were not measured. Zero running workers at cleanup does not imply zero ongoing AWS charges; budget alerts are not a spending cutoff.
 - Public evidence uses explicit aliases and selected fields. Original AWS records remain private; the public projections are not raw responses.
 
-## Code and demonstration
+## Video demonstration
 
-- **Repository:** https://github.com/MDzubair933/blastgate-autonomous-recovery
-- **Technical Video Demonstration (120s):** Rendered 1080p 30 FPS MP4 with narration and subtitles available in the release package (`release/blastgate-stage2-media.zip` and `media-exports/blastgate-demo-120s.mp4`); external hosting link to be added when hosted.
+[![Watch BlastGate 2-Minute Technical Demo on YouTube](assets/cover-1200x675.png)](https://youtu.be/WtddIVtfIfk)
 
+- **Hosted Demonstration Video:** **[https://youtu.be/WtddIVtfIfk](https://youtu.be/WtddIVtfIfk)**
+- **Format:** 120-second 1080p 30 FPS walkthrough with full narration and burned subtitles.
+- **Content:** Combines genuine recorded AWS execution evidence, architecture flow animations, and offline dashboard walkthroughs illustrating closed-loop ECS recovery and Cedar-enforced boundaries.
+- **Offline Deliverable:** Rendered MP4 preserved in release archive `release/blastgate-stage2-media.zip` and `media-exports/blastgate-demo-120s.mp4`.
+
+## Code and repository
+
+- **Public GitHub Repository:** [https://github.com/MDzubair933/blastgate-autonomous-recovery](https://github.com/MDzubair933/blastgate-autonomous-recovery)
 The repository contains the backend source, Harness/Gateway/IAM configuration, contracts, tests, reproduction documentation and an offline dashboard. Use **Recorded AWS evidence** for historical observations and **Simulated operations** for interactive explanatory fixtures.
 
 **[Image 5: overview-simulated.png — optional product view; caption explicitly says simulated]**

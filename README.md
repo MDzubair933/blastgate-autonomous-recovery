@@ -6,6 +6,13 @@ BlastGate detects an application-stalled ECS worker, asks Amazon Nova Micro thro
 
 An ECS task can remain `RUNNING` while its processing loop has stopped making progress. Restarting everything is risky; letting a model decide its own permissions is riskier. BlastGate separates diagnosis, proposal, authorization, execution, and verification. The model never holds `ecs:StopTask` authority.
 
+## Watch the 2-Minute Demo
+
+[![Watch the BlastGate 2-Minute Technical Demonstration](docs/submission/assets/cover-1200x675.png)](https://youtu.be/WtddIVtfIfk)
+
+> **[▶ Watch the Technical Demonstration on YouTube (2:00)](https://youtu.be/WtddIVtfIfk)**  
+> *This 120-second walkthrough combines real recorded AWS execution evidence, architecture animations, and offline dashboard demonstrations to illustrate closed-loop ECS recovery and Cedar-enforced boundaries.*
+
 ## Recorded result
 
 The November 25, 2026 unattended run recorded an incident, dispatcher session, broker `ALLOW`, all eight rule flags, the original task stopped, and a distinct replacement publishing healthy telemetry. Cleanup was recorded at **13:36:50 UTC** with **0 desired / 0 running / 0 pending** tasks. This is historical evidence, not current AWS state.
@@ -27,11 +34,11 @@ The runner does not manually invoke the harness or broker. It **can invoke the w
 
 ## Demonstration video
 
-A 120-second technical demonstration video with narration and burned subtitles (`blastgate-demo-120s.mp4`, 1920×1080 30 FPS H.264, AAC audio) is rendered and preserved locally in `media-exports/blastgate-demo-120s.mp4` and delivery archive `release/blastgate-stage2-media.zip`.
-
+- **Hosted YouTube Video:** [https://youtu.be/WtddIVtfIfk](https://youtu.be/WtddIVtfIfk) (1080p, 120s, full narration & burned subtitles)
 - **Video frames contact sheet:** [docs/submission/assets/final/video-frames/contact-sheet.png](docs/submission/assets/final/video-frames/contact-sheet.png)
 - **Storyboard and narration script:** [docs/submission/video/STORYBOARD.md](docs/submission/video/STORYBOARD.md)
 - **Visual gallery & frame contacts:** [docs/submission/GALLERY.md](docs/submission/GALLERY.md)
+- **Offline deliverable:** Preserved locally in `media-exports/blastgate-demo-120s.mp4` and delivery archive `release/blastgate-stage2-media.zip`.
 
 ![BlastGate local dashboard displaying sanitized recorded AWS evidence](docs/submission/assets/final/07-recorded-aws-recovery.png)
 
