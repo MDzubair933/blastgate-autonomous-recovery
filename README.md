@@ -8,7 +8,13 @@ An ECS task can remain `RUNNING` while its processing loop has stopped making pr
 
 ## Watch the 2-Minute Demo
 
-<video src="https://github.com/user-attachments/assets/7d18da21-7983-45ee-9f77-1c3acdf6bca8" controls width="100%">Your browser does not support embedded video.</video>
+<p align="center">
+  <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/">
+    <img src="docs/submission/assets/cover-1200x675.png" alt="Play the BlastGate 2-minute demo" width="900">
+  </a>
+  <br>
+  <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/"><strong>▶ Open the full-size, centered video player</strong></a>
+</p>
 
 *120-second narrated technical walkthrough with burned subtitles. The demonstration uses historical recorded AWS evidence, architecture animation, and offline dashboard views; it does not show live AWS telemetry.*
 
@@ -33,7 +39,7 @@ The runner does not manually invoke the harness or broker. It **can invoke the w
 
 ## Video materials
 
-- **Direct MP4:** [blastgate.mp4](https://github.com/user-attachments/assets/7d18da21-7983-45ee-9f77-1c3acdf6bca8)
+- **Full-size player:** [Open the centered demo player](https://mdzubair933.github.io/blastgate-autonomous-recovery/)
 - **Video frames contact sheet:** [docs/submission/assets/final/video-frames/contact-sheet.png](docs/submission/assets/final/video-frames/contact-sheet.png)
 - **Storyboard and narration script:** [docs/submission/video/STORYBOARD.md](docs/submission/video/STORYBOARD.md)
 - **Visual gallery & frame contacts:** [docs/submission/GALLERY.md](docs/submission/GALLERY.md)
