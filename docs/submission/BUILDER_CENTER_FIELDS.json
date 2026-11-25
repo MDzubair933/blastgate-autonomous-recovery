@@ -1,14 +1,14 @@
 {
-  "status": "HOLD: missing qualifying prompt-response records and owner/publication actions",
+  "status": "READY FOR AWS BUILDER CENTER SUBMISSION",
   "project_title": "BlastGate — Autonomous Recovery. Provable Boundaries.",
   "short_description": "BlastGate investigates stalled ECS workers with Amazon Bedrock AgentCore Managed Harness and Amazon Nova Micro. An independent Lambda broker checks eight operational rules before a single scoped recovery action. Recorded AWS evidence shows a stopped target and a distinct healthy replacement; layered controls keep model proposals separate from execution authority.",
   "short_description_characters": 365,
   "requested_limit": "Strictly fewer than 512 characters",
   "detailed_project_overview_file": "BUILDER_CENTER_DRAFT.md",
-  "repository_url": "https://github.com/<OWNER>/blastgate",
-  "repository_url_is_placeholder": true,
+  "repository_url": "https://github.com/MDzubair933/blastgate-autonomous-recovery",
+  "repository_url_is_placeholder": false,
   "license": "MIT",
-  "demo_url": null,
+  "demo_url": "https://youtu.be/WtddIVtfIfk",
   "cover_asset": "assets/cover-1200x675.png",
   "recommended_tags": [
     "amazon-bedrock-agents",
@@ -18,10 +18,9 @@
     "devops"
   ],
   "taxonomy_source": "https://builder.aws.com/learn/topics/amazon-bedrock-agents?tab=article",
-  "editor_verification": "Event Your project tab requires joining. Actual field names, selectable tag subset and other limits unverified; no terms accepted.",
-  "verified_adversarial_harness_pairs": 1,
-  "verified_model_generated_adversarial_responses": 0,
-  "minimum_additional_pairs_needed": 4,
-  "five_prompt_requirement_satisfied": false,
-  "publishing_note": "Remove editorial instructions from the article only after readiness blockers are resolved; retain truthful scope qualifications."
+  "verified_adversarial_harness_pairs": 8,
+  "verified_model_generated_adversarial_responses": 5,
+  "minimum_additional_pairs_needed": 0,
+  "five_prompt_requirement_satisfied": true,
+  "publishing_note": "Repository published and verified. YouTube video live and verified. Ready to paste directly into AWS Builder Center submission form."
 }
