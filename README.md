@@ -8,10 +8,9 @@ An ECS task can remain `RUNNING` while its processing loop has stopped making pr
 
 ## Watch the 2-Minute Demo
 
-[![Watch the BlastGate 2-Minute Technical Demonstration](docs/submission/assets/cover-1200x675.png)](https://youtu.be/WtddIVtfIfk)
+<video src="https://github.com/user-attachments/assets/7d18da21-7983-45ee-9f77-1c3acdf6bca8" controls width="100%">Your browser does not support embedded video.</video>
 
-> **[▶ Watch the Technical Demonstration on YouTube (2:00)](https://youtu.be/WtddIVtfIfk)**  
-> *This 120-second walkthrough combines real recorded AWS execution evidence, architecture animations, and offline dashboard demonstrations to illustrate closed-loop ECS recovery and Cedar-enforced boundaries.*
+*120-second narrated technical walkthrough with burned subtitles. The demonstration uses historical recorded AWS evidence, architecture animation, and offline dashboard views; it does not show live AWS telemetry.*
 
 ## Recorded result
 
@@ -32,13 +31,13 @@ The runner does not manually invoke the harness or broker. It **can invoke the w
 - [Stage 2 media readiness and video](docs/submission/MEDIA_READINESS_REPORT.md)
 - [Official submission readiness and verified evidence](docs/submission/READINESS_REPORT.md)
 
-## Demonstration video
+## Video materials
 
-- **Hosted YouTube Video:** [https://youtu.be/WtddIVtfIfk](https://youtu.be/WtddIVtfIfk) (1080p, 120s, full narration & burned subtitles)
+- **Direct MP4:** [blastgate.mp4](https://github.com/user-attachments/assets/7d18da21-7983-45ee-9f77-1c3acdf6bca8)
 - **Video frames contact sheet:** [docs/submission/assets/final/video-frames/contact-sheet.png](docs/submission/assets/final/video-frames/contact-sheet.png)
 - **Storyboard and narration script:** [docs/submission/video/STORYBOARD.md](docs/submission/video/STORYBOARD.md)
 - **Visual gallery & frame contacts:** [docs/submission/GALLERY.md](docs/submission/GALLERY.md)
-- **Offline deliverable:** Preserved locally in `media-exports/blastgate-demo-120s.mp4` and delivery archive `release/blastgate-stage2-media.zip`.
+- **Editable video source and local export:** [video project](docs/submission/video/README.md); the original export is preserved locally in `media-exports/blastgate-demo-120s.mp4` and `release/blastgate-stage2-media.zip`.
 
 ![BlastGate local dashboard displaying sanitized recorded AWS evidence](docs/submission/assets/final/07-recorded-aws-recovery.png)
 
