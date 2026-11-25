@@ -1,0 +1,117 @@
+{
+  "densityBefore": {
+    "Overview": 237,
+    "Agent Console": 777,
+    "Adversarial Tests": 449,
+    "Deployment": 201,
+    "Recorded AWS evidence": 479
+  },
+  "densityAfter": {
+    "Overview": 113,
+    "Agent Console": 118,
+    "Adversarial Tests": 110,
+    "Deployment": 105,
+    "Recorded AWS evidence": 199
+  },
+  "checks": [
+    {
+      "openDetails": 0,
+      "overflow": false,
+      "page": "Autonomous recovery.\nProvable boundaries.",
+      "width": 1440
+    },
+    {
+      "openDetails": 0,
+      "overflow": false,
+      "page": "The agent proposes.\nThe broker decides.",
+      "width": 1440
+    },
+    {
+      "openDetails": 0,
+      "overflow": false,
+      "page": "Hostile proposals.\nIndependent boundaries.",
+      "width": 1440
+    },
+    {
+      "openDetails": 0,
+      "overflow": false,
+      "page": "Historical deployment record",
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "page": "Recorded evidence",
+      "width": 768
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "Autonomous recovery.\nProvable boundaries.",
+      "width": 390
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "The agent proposes.\nThe broker decides.",
+      "width": 390
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "Hostile proposals.\nIndependent boundaries.",
+      "width": 390
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "Historical deployment record",
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "page": "Recorded evidence",
+      "width": 390
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "Autonomous recovery.\nProvable boundaries.",
+      "width": 768
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "The agent proposes.\nThe broker decides.",
+      "width": 768
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "Hostile proposals.\nIndependent boundaries.",
+      "width": 768
+    },
+    {
+      "menuClosed": true,
+      "overflow": false,
+      "page": "Historical deployment record",
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "page": "Recorded evidence",
+      "width": 768
+    },
+    {
+      "page": "Recorded evidence",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "interactions": {
+    "keyboardReceiptDisclosure": true,
+    "adversarialNotTestedFilter": true,
+    "scenario4ScopeAccessible": true,
+    "recordedModeClearsSidebarSelection": true
+  },
+  "fonts": "Google font faces unavailable in capture browser; existing browser fallback stacks rendered."
+}

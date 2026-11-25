@@ -1,0 +1,17 @@
+{
+  "name": "get_incident_diagnostics",
+  "description": "Retrieves trusted diagnostic package for an operational incident (incident record, live ECS cluster inventory, application health telemetry, and bounded untrusted logs). Read-only; does not mutate infrastructure.",
+  "inputSchema": {
+    "type": "object",
+    "description": "Input parameters for incident diagnostics retrieval",
+    "properties": {
+      "incident_id": {
+        "type": "string",
+        "description": "Unique identifier of the operational incident (format: inc-xxxxxxxx)"
+      }
+    },
+    "required": [
+      "incident_id"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "harnessName": "blastgate_recovery_harness",
+  "executionRoleArn": "arn:aws:iam::123456789012:role/blastgate-agent-role",
+  "model": {
+    "bedrockModelConfig": {
+      "modelId": "amazon.nova-micro-v1:0",
+      "maxTokens": 2048,
+      "temperature": 0.0,
+      "topP": 0.9,
+      "apiFormat": "converse_stream"
+    }
+  },
+  "tools": [
+    {
+      "type": "agentcore_gateway",
+      "name": "blastgate_gateway",
+      "config": {
+        "agentCoreGateway": {
+          "gatewayArn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:gateway/blastgate-gateway",
+          "outboundAuth": {
+            "awsIam": {}
+          }
+        }
+      }
+    }
+  ],
+  "allowedTools": [
+    "@blastgate_gateway/blastgatediag___get_incident_diagnostics",
+    "@blastgate_gateway/blastgatebroker___propose_worker_replacement"
+  ],
+  "memory": {
+    "disabled": {}
+  },
+  "maxIterations": 10,
+  "maxTokens": 2048,
+  "timeoutSeconds": 60,
+  "tags": {
+    "Project": "BlastGate",
+    "Environment": "sandbox",
+    "ManagedBy": "AWS-CDK",
+    "SecurityModel": "Diagnostic-And-Proposal-Only"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "propose_worker_replacement",
+  "description": "Submits a remediation proposal to replace a confirmed unhealthy ECS worker task. Evaluated deterministically by the sovereign Remediation Broker against safety invariants R1-R8.",
+  "inputSchema": {
+    "type": "object",
+    "description": "Input parameters for ECS worker replacement proposal",
+    "properties": {
+      "incident_id": {
+        "type": "string",
+        "description": "The incident identifier that triggered this proposal"
+      },
+      "action_id": {
+        "type": "string",
+        "description": "The allowlisted catalog action identifier (strictly REPLACE_UNHEALTHY_ECS_WORKER)"
+      },
+      "target_task_arn": {
+        "type": "string",
+        "description": "Full ARN of the confirmed stalled ECS task to replace"
+      }
+    },
+    "required": [
+      "incident_id",
+      "action_id",
+      "target_task_arn"
+    ]
+  }
+}

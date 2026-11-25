@@ -1,0 +1,112 @@
+{
+  "title": "BlastGate — Autonomous Recovery. Provable Boundaries.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_seconds": 120,
+  "codec": "H.264",
+  "voice": "Microsoft Zira Desktop, offline Windows speech",
+  "music": "None",
+  "evidence_policy": "All AWS observations labeled Recorded AWS Execution. Animation is explanation, never invented execution.",
+  "scenes": [
+    {
+      "id": "intro",
+      "start": 0,
+      "duration": 7,
+      "title": "Autonomous recovery. Provable boundaries.",
+      "scope": "Brand introduction",
+      "asset": "cover",
+      "narration": "BlastGate investigates stalled workers while keeping execution authority outside the model."
+    },
+    {
+      "id": "problem",
+      "start": 7,
+      "duration": 8,
+      "title": "Running does not always mean working.",
+      "scope": "Simulated operations · explanatory dashboard",
+      "asset": "06-overview-simulated",
+      "narration": "A container can keep running after its application stops making progress. Restarting the wrong worker can make an incident worse."
+    },
+    {
+      "id": "architecture-detect",
+      "start": 15,
+      "duration": 12,
+      "title": "From application health to an incident.",
+      "scope": "Architecture animation · explanatory order, not event timings",
+      "asset": "architecture",
+      "narration": "Workers publish application health. The watchdog, CloudWatch alarm and EventBridge route an incident to a dispatcher, which invokes the managed Harness."
+    },
+    {
+      "id": "architecture-authority",
+      "start": 27,
+      "duration": 13,
+      "title": "Reasoning and execution have different owners.",
+      "scope": "Architecture animation · configured enforcement layers",
+      "asset": "architecture",
+      "narration": "Amazon Nova Micro reasons inside AgentCore. Gateway and Cedar scope its tools. An independent broker checks eight rules before a scoped ECS task stop."
+    },
+    {
+      "id": "dispatch",
+      "start": 40,
+      "duration": 12,
+      "title": "An incident-to-agent handoff was observed.",
+      "scope": "Recorded AWS Execution · unattended recovery",
+      "asset": "04-dispatcher-recorded",
+      "narration": "The recorded unattended run correlates an incident with a dispatch session. The runner did not manually call the Harness or broker, but could accelerate the watchdog."
+    },
+    {
+      "id": "authorization",
+      "start": 52,
+      "duration": 13,
+      "title": "Broker ALLOW. Eight captured rule flags.",
+      "scope": "Recorded AWS Execution · unattended recovery",
+      "asset": "05-ecs-recovery-recorded",
+      "narration": "The broker recorded ALLOW with all eight rule flags true. The captured reason field contains the action identifier. We preserve it without inventing a normalized result."
+    },
+    {
+      "id": "recovery",
+      "start": 65,
+      "duration": 15,
+      "title": "A new task, with healthy application telemetry.",
+      "scope": "Recorded AWS Execution · saved outcomes, not current state",
+      "asset": "07-recorded-aws-recovery",
+      "narration": "The original target stopped. A distinct replacement published healthy telemetry. Cleanup recorded zero desired, running and pending workers. Intermediate timestamps and a complete tool transcript are not retained."
+    },
+    {
+      "id": "adversarial",
+      "start": 80,
+      "duration": 12,
+      "title": "An actual request. The actual returned answer.",
+      "scope": "Recorded AWS Execution · ADV-03",
+      "asset": "02-adversarial-agent-response",
+      "narration": "This adversarial request targets an external service. The agent attempts diagnostics and reports that the incident is missing. That is the observed answer, not proof of a reached scope-validation branch."
+    },
+    {
+      "id": "guardrail",
+      "start": 92,
+      "duration": 13,
+      "title": "The perimeter can stop a request before inference.",
+      "scope": "Recorded AWS Execution · ADV-04",
+      "asset": "03-guardrail-block",
+      "narration": "This request asks for an unapproved infrastructure modification. The saved Harness response is a Guardrail block. Model activity, blocked inputs and model-generated answers remain distinct evidence categories."
+    },
+    {
+      "id": "dashboard",
+      "start": 105,
+      "duration": 8,
+      "title": "One clear view of outcomes and boundaries.",
+      "scope": "Simulated operations · dashboard overview",
+      "asset": "06-overview-simulated",
+      "narration": "The dashboard separates interactive simulated operations from recorded AWS evidence, making each result and its limitations inspectable."
+    },
+    {
+      "id": "outro",
+      "start": 113,
+      "duration": 7,
+      "title": "The agent proposes. The broker decides.",
+      "scope": "Recorded AWS Execution · historical recovery verified",
+      "asset": "05-ecs-recovery-recorded",
+      "narration": "Independent authorization. A healthy replacement. BlastGate."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "policyEngineName": "blastgate_policy_engine",
+  "policyName": "blastgate_gateway_cedar_policy",
+  "enforcementMode": "ACTIVE",
+  "validationMode": "FAIL_ON_ANY_FINDINGS",
+  "description": "Default-deny Cedar policy permitting only get_incident_diagnostics and scoped propose_worker_replacement",
+  "validationStatus": "LOCAL_STRUCTURAL_PASS_AWS_VALIDATION_PENDING"
+}

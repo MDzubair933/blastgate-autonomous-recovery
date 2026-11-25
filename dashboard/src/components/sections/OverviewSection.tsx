@@ -1,0 +1,19 @@
+import React from "react";
+import {FleetCapacity,IncidentRecord,DecisionReceipt,SecurityRule,WorkerRecord} from "@/types";
+interface Props {
+ capacity:FleetCapacity;workers:WorkerRecord[];incidents:IncidentRecord[];receipts:DecisionReceipt[];rules:SecurityRule[];
+ onNavigateTab:(id:string)=>void;onSelectWorker?:(id:string)=>void;onSelectIncident?:(id:string)=>void;
+}
+export function OverviewSection({capacity,workers,incidents,receipts,rules,onNavigateTab,onSelectWorker,onSelectIncident}:Props) {
+ const open=incidents.filter(i=>i.status==="OPEN");
+ const receipt=receipts.find(r=>r.incident_id===open[0]?.incident_id);
+ const share=capacity.desired_count?`${(100*capacity.healthy_count/capacity.desired_count).toFixed(1)}%`:"Idle";
+ return <div className="presentation-page">
+  <header className="page-intro"><p className="eyebrow">Recovery, with boundaries</p><h1>Autonomous recovery.<br/><em>Provable boundaries.</em></h1><p>The agent proposes. The broker decides.<br/>A pre-remediation demo snapshot; recorded AWS evidence is a separate view.</p></header>
+  <div className="summary-band four-stats">{[{label:"Demo workers",value:capacity.desired_count},{label:"Open demo incidents",value:open.length},{label:"Simulated approvals",value:receipts.filter(r=>r.decision==="ALLOW").length},{label:"Healthy worker share",value:share}].map(m=><div key={m.label}><strong>{m.value}</strong><span>{m.label}</span></div>)}</div>
+  <section><div className="section-heading"><h2>ECS worker fleet</h2><button className="text-link" onClick={()=>onNavigateTab("workers")}>Inspect fleet ↗</button></div><div className="fleet-strip">{workers.map(w=><button key={w.short_id} onClick={()=>{onSelectWorker?.(w.short_id);onNavigateTab("workers");}}><span className="technical-id">{w.short_id}</span><span className={w.state==="STALLED"?"text-[#D8A955]":"quiet"}>{w.state.toLowerCase()}</span></button>)}</div><p className="quiet text-sm mt-4">{capacity.healthy_count}/{capacity.desired_count} healthy · minimum {capacity.min_healthy_threshold} · maximum {capacity.max_unavailable_percent}% unavailable. Capacity alone does not authorize mutation.</p></section>
+  <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14"><section><div className="section-heading"><h2>Recent demo incidents</h2></div><div className="ruled-list">{incidents.map(i=><button key={i.incident_id} className="incident-row" onClick={()=>{onSelectIncident?.(i.incident_id);onNavigateTab("incidents");}}><span><span className="technical-id">{i.incident_id}</span><span className="block mt-1">{i.target_short_id}</span></span><span className="quiet text-sm">{i.status.toLowerCase()} ↗</span></button>)}</div></section>
+   <section><div className="section-heading"><h2>Illustrated outcome</h2><button className="text-link" onClick={()=>onNavigateTab("decision-console")}>Inspect decision ↗</button></div><p className="text-xl leading-relaxed">{receipt?.decision==="ALLOW"?"Broker approval. Simulated recovery.":"Inspect the recorded demo decision."}</p><p className="quiet text-sm mt-3">Authorization and execution are separate steps.</p><details className="disclosure mt-5"><summary>View full demo sequence</summary><ol className="disclosure-body space-y-3">{receipt?.timeline_steps.map(s=><li key={s.step_number}><span className="technical-id mr-3">{s.step_number}</span>{s.name}<span className="quiet text-xs block mt-1">{s.timestamp} · {s.status.toLowerCase()}</span></li>)}</ol></details><details className="disclosure"><summary>Security rules R1–R8</summary><div className="disclosure-body space-y-3">{rules.map(r=><button className="flex gap-3 text-left text-sm" key={r.rule_id} onClick={()=>onNavigateTab("security-rules")}><span className="technical-id">{r.rule_id}</span>{r.name}</button>)}</div></details></section>
+  </div>
+ </div>;
+}

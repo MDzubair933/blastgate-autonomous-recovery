@@ -1,0 +1,180 @@
+[
+  {
+    "view": "Overview",
+    "heading": "Autonomous recovery.Provable boundaries.",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Workers",
+    "heading": "ECS Worker Fleet Telemetry (Simulated Reference Fleet)",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Incidents 1",
+    "heading": "Incident Investigation & Log Boundaries",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Agent Console",
+    "heading": "Agent Decision Console & Lifecycle",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Security Rules",
+    "heading": "Security Enforcement Panel (Rules R1–R8)",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Adversarial Tests",
+    "heading": "Adversarial Robustness & Jailbreak Evidence",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Audit Explorer",
+    "heading": "Audit Evidence Explorer & Hash Chaining",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Deployment",
+    "heading": "Historical deployment record",
+    "scroll": 1435,
+    "unlabeledInputs": 0,
+    "width": 1440
+  },
+  {
+    "view": "Overview",
+    "heading": "Autonomous recovery.Provable boundaries.",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Workers",
+    "heading": "ECS Worker Fleet Telemetry (Simulated Reference Fleet)",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Incidents 1",
+    "heading": "Incident Investigation & Log Boundaries",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Agent Console",
+    "heading": "Agent Decision Console & Lifecycle",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Security Rules",
+    "heading": "Security Enforcement Panel (Rules R1–R8)",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Adversarial Tests",
+    "heading": "Adversarial Robustness & Jailbreak Evidence",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Audit Explorer",
+    "heading": "Audit Evidence Explorer & Hash Chaining",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Deployment",
+    "heading": "Historical deployment record",
+    "scroll": 763,
+    "unlabeledInputs": 0,
+    "width": 768
+  },
+  {
+    "view": "Recorded",
+    "scroll": 763,
+    "width": 768
+  },
+  {
+    "view": "Overview",
+    "heading": "Autonomous recovery.Provable boundaries.",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Workers",
+    "heading": "ECS Worker Fleet Telemetry (Simulated Reference Fleet)",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Incidents 1",
+    "heading": "Incident Investigation & Log Boundaries",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Agent Console",
+    "heading": "Agent Decision Console & Lifecycle",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Security Rules",
+    "heading": "Security Enforcement Panel (Rules R1–R8)",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Adversarial Tests",
+    "heading": "Adversarial Robustness & Jailbreak Evidence",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Audit Explorer",
+    "heading": "Audit Evidence Explorer & Hash Chaining",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Deployment",
+    "heading": "Historical deployment record",
+    "scroll": 385,
+    "unlabeledInputs": 0,
+    "width": 390
+  },
+  {
+    "view": "Recorded",
+    "scroll": 385,
+    "width": 390
+  }
+]

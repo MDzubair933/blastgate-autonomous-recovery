@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BlastGate Remediation Request Schema",
+  "description": "Payload schema for remediation proposals submitted by Bedrock Agent to the Remediation Broker. Rejects arbitrary flags, capacity numbers, or permissions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "incident_id",
+    "action_id",
+    "target_task_arn"
+  ],
+  "properties": {
+    "incident_id": {
+      "type": "string",
+      "pattern": "^inc-[a-f0-9]{8,36}$",
+      "description": "Unique identifier of the diagnosed operational incident."
+    },
+    "action_id": {
+      "type": "string",
+      "enum": [
+        "REPLACE_UNHEALTHY_ECS_WORKER"
+      ],
+      "description": "Approved catalog action identifier."
+    },
+    "target_task_arn": {
+      "type": "string",
+      "pattern": "^arn:aws:ecs:[a-z0-9-]+:[0-9]{12}:task/blastgate-sandbox/[a-f0-9]{32}$",
+      "description": "Specific ECS task ARN targeted for remediation within the sandbox cluster."
+    }
+  }
+}

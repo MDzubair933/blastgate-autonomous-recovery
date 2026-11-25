@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BlastGate Audit Event Schema",
+  "description": "Schema for structured, append-only immutable audit records emitted to DynamoDB blastgate-audit and CloudWatch Logs. Writer role has PutItem-only permission with attribute_not_exists conditional protection.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "event_type",
+    "incident_id",
+    "decision_id",
+    "actor_type",
+    "rule_results",
+    "requested_action",
+    "authorization_decision",
+    "execution_status",
+    "timestamp",
+    "evidence_references",
+    "schema_version",
+    "integrity"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^evt-[a-f0-9]{8,36}$"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "AUTHORIZATION_DECISION",
+        "MUTATION_EXECUTION",
+        "SYSTEM_REFUSAL",
+        "COOLDOWN_RESERVATION"
+      ]
+    },
+    "incident_id": {
+      "type": "string",
+      "pattern": "^inc-[a-f0-9]{8,36}$"
+    },
+    "decision_id": {
+      "type": "string",
+      "pattern": "^dec-[a-f0-9]{8,36}$"
+    },
+    "actor_type": {
+      "type": "string",
+      "enum": [
+        "AGENT_GATEWAY",
+        "LAMBDA_BROKER",
+        "SYSTEM_WATCHDOG"
+      ]
+    },
+    "rule_results": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "R1_allowlist",
+        "R2_capacity",
+        "R3_telemetry",
+        "R4_cooldown",
+        "R5_catalog",
+        "R6_audit",
+        "R7_authority",
+        "R8_idempotency"
+      ],
+      "properties": {
+        "R1_allowlist": {
+          "type": "boolean"
+        },
+        "R2_capacity": {
+          "type": "boolean"
+        },
+        "R3_telemetry": {
+          "type": "boolean"
+        },
+        "R4_cooldown": {
+          "type": "boolean"
+        },
+        "R5_catalog": {
+          "type": "boolean"
+        },
+        "R6_audit": {
+          "type": "boolean"
+        },
+        "R7_authority": {
+          "type": "boolean"
+        },
+        "R8_idempotency": {
+          "type": "boolean"
+        }
+      }
+    },
+    "requested_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorization_decision": {
+      "type": "string",
+      "enum": [
+        "ALLOW",
+        "DENY",
+        "ERROR",
+        "UNKNOWN"
+      ]
+    },
+    "execution_status": {
+      "type": "string",
+      "enum": [
+        "NOT_STARTED",
+        "SUBMITTED",
+        "VERIFIED",
+        "FAILED",
+        "UNKNOWN"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_sha256",
+        "previous_event_sha256",
+        "writer_role_arn"
+      ],
+      "properties": {
+        "event_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "previous_event_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^([a-f0-9]{64})?$"
+        },
+        "writer_role_arn": {
+          "type": "string",
+          "pattern": "^arn:aws:iam::[0-9]{12}:role/[a-zA-Z0-9_-]+$"
+        }
+      }
+    }
+  }
+}

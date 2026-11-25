@@ -1,0 +1,256 @@
+{
+  "stage": "Stage 2 final media; no publication",
+  "capture_date": "2026-11-25",
+  "authenticated_aws_console_capture_available": false,
+  "capture_policy": "Genuine browser captures. Recorded-data views are locally rendered derivatives, never original AWS Console screenshots. No paid calls or infrastructure changes.",
+  "screenshots": [
+    {
+      "path": "assets/final/01-agentcore-recorded.png",
+      "bytes": 352573,
+      "sha256": "8d03322f9fc57883f25aab221b732bc34df6be754ffcd25d29764def6ed359cb",
+      "width": 1600,
+      "height": 900,
+      "scope": "Saved Step 6 Harness stream derivative; earlier manual invocation, not unattended",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/02-adversarial-agent-response.png",
+      "bytes": 572486,
+      "sha256": "0615cc76ed991e4ecc6681d65be4bd9114d7d603e31fcc775114d4b967873684",
+      "width": 1600,
+      "height": 900,
+      "scope": "New adversarial source ADV-03; actual missing-incident end_turn answer",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/03-guardrail-block.png",
+      "bytes": 447463,
+      "sha256": "d636b9c8fd6104d7846a9bf6a07c948ad2ec0f259d347fe32381d859d0a6948d",
+      "width": 1600,
+      "height": 900,
+      "scope": "New adversarial source ADV-04; actual pre-inference Guardrail block",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/04-dispatcher-recorded.png",
+      "bytes": 397514,
+      "sha256": "8db9c373e0a22bca9ab6a5f532c1a8d6574d1cfbfa76a591b3ab0c252122557f",
+      "width": 1600,
+      "height": 900,
+      "scope": "Public unattended JSON incident/session correlation; watchdog acceleration disclosed",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/05-ecs-recovery-recorded.png",
+      "bytes": 389151,
+      "sha256": "7d0749009a66220ae2450fd5d73bf793743f4b92ca8caf05e53b59f15c11d7e0",
+      "width": 1600,
+      "height": 900,
+      "scope": "Public unattended JSON broker/replacement/health/cleanup observations",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/06-overview-simulated.png",
+      "bytes": 412766,
+      "sha256": "6b86ca32e88368a9bc36e71b263b285fbf3c096919573bf7b8b3911d05f95669",
+      "width": 1600,
+      "height": 900,
+      "scope": "Actual local dashboard Overview; simulated operations",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/07-recorded-aws-recovery.png",
+      "bytes": 457034,
+      "sha256": "c60472f8295dd8e6a87f16d74b762a795c8a6c06aaed1b747a29b5cb541e7d99",
+      "width": 1600,
+      "height": 900,
+      "scope": "Actual local dashboard Recorded AWS Recovery; historical saved AWS results",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/08-rules-simulated.png",
+      "bytes": 646716,
+      "sha256": "b8e8836fe13f4413d7d83e61008059a205ce8e1b9b8cec31adca9e7c853384a9",
+      "width": 1600,
+      "height": 900,
+      "scope": "Actual local dashboard Security Rules; explanatory definitions and local references",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/09-adversarial-local-fixtures.png",
+      "bytes": 351937,
+      "sha256": "89dd56a4e1126a41527957536e4990e0d9925daa8ff677fa2205841e4959caff",
+      "width": 1600,
+      "height": 900,
+      "scope": "Actual local dashboard Adversarial Tests; synthetic fixtures, model NOT TESTED",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    },
+    {
+      "path": "assets/final/10-audit-simulated.png",
+      "bytes": 508366,
+      "sha256": "286d8c3c05c03570e3f363a2672cd5b843283befe38210f382e5ebc5e076930a",
+      "width": 1600,
+      "height": 900,
+      "scope": "Actual local dashboard Audit Explorer; simulated records and hashes",
+      "capture_surface": "CUA browser screenshot",
+      "viewport": [
+        1600,
+        900
+      ],
+      "visual_editing": "None; JPEG screenshot transport normalized to PNG without visual edits."
+    }
+  ],
+  "recorded_sources": [
+    {
+      "reference": "public evidence/recorded-evidence.json",
+      "sha256": "c92529abaeceaf0e21f774fd5ab08824493a6ed70ea854b41b63f34a0b8d1cd0"
+    },
+    {
+      "reference": "public Step 6 selected stream derivative",
+      "sha256": "73026908028db05e62ffde2f8401e49896c9dd0f944b202330caa0dcdbb18451"
+    },
+    {
+      "reference": "private evidence/adversarial_prompts/agentcore_adversarial_raw_evidence.json",
+      "sha256": "ddfc1b65544508ff5784d0a8bcfa856af52ce3f6dd0916bc3f6eaf5649be464b",
+      "original_kept_private": true
+    }
+  ],
+  "adversarial_visible_output_scope": "Five saved runs flag model activity, but four of those end with Guardrail interception. One visible final answer ends end_turn and reports a missing incident. Do not label these five model-generated policy refusals.",
+  "video": {
+    "path": "media-exports/blastgate-demo-120s.mp4",
+    "bytes": 4709437,
+    "sha256": "a43803d07efa1539bc6bac0e51b67e67ade02ffa71e275c8ec6ee74a0a4edc9d",
+    "duration_seconds": 120.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "video_codec": "H.264",
+    "audio_codec": "AAC",
+    "audio_source": "Microsoft Zira Desktop, synthesized offline; no music",
+    "editing": "Still browser captures, subtle camera movement, chapter fades and explanatory architecture highlights. Burned subtitles. No fake execution or measured event timings.",
+    "git_tracking": "Excluded; public host undecided"
+  },
+  "representative_frames": [
+    {
+      "path": "assets/final/video-frames/frame-004s.png",
+      "bytes": 375622,
+      "sha256": "0460594b6fece97c4c9c006413e40c2713418f4e6d1742d5701df2f7bd831cdf",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-020s.png",
+      "bytes": 453842,
+      "sha256": "2f97aa5d6879b07b6ad3e0a1ccd12428b0482c4c9034ebd62dc38a6e82aee1b7",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-034s.png",
+      "bytes": 460013,
+      "sha256": "ecc7422b44871321538e3ee747fea0e99e3a0160ae250b1319ef424a0e7961e6",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-046s.png",
+      "bytes": 326047,
+      "sha256": "98cefbcb959a38f8183e21c786a5ee4e2b5230ef38201b19002104e91b615db0",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-059s.png",
+      "bytes": 325359,
+      "sha256": "a9b7c4873cc05e576f58e71e4cd78817d62cb1cb3f1a9876801afb6889515a17",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-072s.png",
+      "bytes": 398721,
+      "sha256": "3fa026cbbb098c26a5c2410eb4d099a463c2a4cf9bb75d810a088cda281294b1",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-086s.png",
+      "bytes": 450361,
+      "sha256": "d1f8c2e300bcf4e728f733c8255947a0bcf1d4bfc56dbb390501a62041e2b355",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-098s.png",
+      "bytes": 370183,
+      "sha256": "bef37d5abbfdfcc1cc0058664e824c9ba9925ce9c1cce8ea881dbfaec31ec11b",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-109s.png",
+      "bytes": 363879,
+      "sha256": "3d8126771d4e3f641aaf4d2082c62ec706bc5faefac909272fb83fcd99bda29e",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "assets/final/video-frames/frame-116s.png",
+      "bytes": 322037,
+      "sha256": "33a2423877606c38d717890118771c77a8e86bed0b9a96e06820be3a66f2bed2",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "graphics": {
+    "architecture": "Retained reviewed source PNG/SVG; authored architecture illustration",
+    "cover": "Retained 1200x675 authored BlastGate cover",
+    "contact_sheet": "Generated index of the ten genuine captures, captions kept separate from source pixels"
+  },
+  "backend_rules_original_evidence_modified": false
+}

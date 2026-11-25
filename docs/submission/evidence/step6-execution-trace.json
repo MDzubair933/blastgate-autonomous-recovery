@@ -1,0 +1,59 @@
+{
+  "kind": "Allowlisted recorded AgentCore event-stream derivative; not an AWS Console export",
+  "source_reference": "private Step 6 saved harness_events and recovery observations",
+  "source_sha256": "d518e4153e76fa8ab26b0d76aac7d46a88ae80c133888dcd9247306fbd3b646e",
+  "recorded_start_utc": "2026-11-25T07:56:17.638610+00:00",
+  "stream_event_count": 490,
+  "session_alias": "session-step6-01",
+  "incident_alias": "incident-step6-01",
+  "is_adversarial_test": false,
+  "manual_harness_invocation": true,
+  "tools": [
+    {
+      "name": "blastgatediag___get_incident_diagnostics",
+      "status_code": 200,
+      "ecs_last_status": "RUNNING",
+      "processing_state": "STALLED",
+      "is_unhealthy": true,
+      "health_age_seconds": 7.258800506591797
+    },
+    {
+      "name": "blastgatebroker___propose_worker_replacement",
+      "status_code": 200,
+      "action_id": "REPLACE_UNHEALTHY_ECS_WORKER",
+      "decision": "ALLOW",
+      "reason_code": "AUTH_APPROVED",
+      "execution_status": "SUBMITTED",
+      "recorded_at": "2026-11-25T07:58:38.351015+00:00",
+      "rule_results": {
+        "R1_allowlist": true,
+        "R2_capacity": true,
+        "R3_telemetry": true,
+        "R4_cooldown": true,
+        "R5_catalog": true,
+        "R6_audit": true,
+        "R7_authority": true,
+        "R8_idempotency": true
+      }
+    }
+  ],
+  "final_assistant_response": "The broker has authorized the replacement of the unhealthy ECS worker task. Here are the details of the decision:\n- Decision ID: `decision-step6-01`\n- AWS Request ID: `request-step6-01`\n- Decision: `ALLOW`\n- Reason Code: `AUTH_APPROVED`\n\nService recovery will require verification of a newly healthy replacement task.",
+  "final_stop_reason": "end_turn",
+  "later_recovery_observations": {
+    "target_stopped": true,
+    "distinct_replacement_observed": true,
+    "recovered_healthy": true,
+    "cleanup": {
+      "desiredCount": 0,
+      "runningCount": 0,
+      "pendingCount": 0
+    }
+  },
+  "limitations": [
+    "Historical manually invoked Step 6 session; distinct from the later unattended run.",
+    "The receipt returned SUBMITTED. Later task/heartbeat observations establish recovery, not the receipt alone.",
+    "Prompt text is reconstructed in the private runner source; this public derivative does not claim a captured inbound-message event.",
+    "Model thinking blocks, logs and operational identifiers are omitted. Aliases replace decision/request IDs in the final response.",
+    "Source fingerprint is not an AWS signature or independent attestation."
+  ]
+}

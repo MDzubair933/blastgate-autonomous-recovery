@@ -1,0 +1,33 @@
+{
+  "catalog_version": "1.0.0",
+  "last_updated": "2026-11-22T10:30:00Z",
+  "description": "BlastGate Authorized Remediation Catalog - Strict sandbox single-action allowlist.",
+  "actions": [
+    {
+      "action_id": "REPLACE_UNHEALTHY_ECS_WORKER",
+      "runbook_id": "RB-ECS-001",
+      "enabled": true,
+      "environment": "sandbox",
+      "aws_api": "ecs:StopTask",
+      "allowed_cluster": "blastgate-sandbox",
+      "allowed_service": "blastgate-workers",
+      "allowed_task_family": "blastgate-worker",
+      "max_tasks_per_operation": 1,
+      "max_authorized_replacements": 1,
+      "cooldown_window_seconds": 600,
+      "reference_desired_count": 6,
+      "min_healthy_tasks": 4,
+      "max_projected_unavailable_percent": 20.0,
+      "requires_verified_unhealthy_state": true,
+      "requires_recent_telemetry": true,
+      "requires_stable_deployment": true,
+      "requires_recovery_verification": true,
+      "prohibited_environments": [
+        "production",
+        "staging",
+        "corporate-shared",
+        "pci-dss"
+      ]
+    }
+  ]
+}

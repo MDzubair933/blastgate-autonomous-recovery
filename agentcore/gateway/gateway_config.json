@@ -1,0 +1,16 @@
+{
+  "name": "blastgate-gateway",
+  "roleArn": "arn:aws:iam::123456789012:role/blastgate-gateway-example",
+  "protocolType": "MCP",
+  "authorizerType": "AWS_IAM",
+  "description": "BlastGate AgentCore Gateway connecting to scoped diagnostics and remediation broker targets",
+  "policyEngineConfiguration": {
+    "arn": "arn:aws:bedrock-agentcore:us-east-1:123456789012:policy-engine/blastgate_policy_engine",
+    "mode": "ENFORCE"
+  },
+  "tags": {
+    "Project": "BlastGate",
+    "Environment": "sandbox",
+    "ManagedBy": "AWS-CDK"
+  }
+}

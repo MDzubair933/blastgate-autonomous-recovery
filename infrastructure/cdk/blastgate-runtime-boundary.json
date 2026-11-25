@@ -1,0 +1,128 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowBlastGateBedrockAndAgentCoreRuntime",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:ApplyGuardrail",
+        "bedrock-agentcore:InvokeGateway",
+        "bedrock-agentcore:AuthorizeAction",
+        "bedrock-agentcore:PartiallyAuthorizeActions",
+        "bedrock-agentcore:GetPolicyEngine",
+        "bedrock-agentcore:InvokeHarness",
+        "bedrock-agentcore:InvokeAgentRuntime"
+      ],
+      "Resource": [
+        "arn:aws:bedrock:us-east-1::foundation-model/*",
+        "arn:aws:bedrock:us-east-1:123456789012:inference-profile/*",
+        "arn:aws:bedrock:us-east-1:123456789012:guardrail/*",
+        "arn:aws:bedrock-agentcore:us-east-1:123456789012:gateway/blastgate-gateway*",
+        "arn:aws:bedrock-agentcore:us-east-1:123456789012:policy-engine/blastgate_policy_engine*",
+        "arn:aws:bedrock-agentcore:us-east-1:123456789012:harness/blastgate_recovery_harness*"
+      ]
+    },
+    {
+      "Sid": "AllowBlastGateDynamoAndLambdaRuntime",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:GetItem",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "lambda:InvokeFunction",
+        "events:PutEvents",
+        "sqs:SendMessage",
+        "sqs:GetQueueAttributes",
+        "sqs:GetQueueUrl"
+      ],
+      "Resource": [
+        "arn:aws:dynamodb:us-east-1:123456789012:table/blastgate-*",
+        "arn:aws:lambda:us-east-1:123456789012:function:blastgate-*",
+        "arn:aws:events:us-east-1:123456789012:event-bus/default",
+        "arn:aws:sqs:us-east-1:123456789012:blastgate-*"
+      ]
+    },
+    {
+      "Sid": "AllowScopedSandboxStopTaskOnly",
+      "Effect": "Allow",
+      "Action": "ecs:StopTask",
+      "Resource": "arn:aws:ecs:us-east-1:123456789012:task/blastgate-sandbox/*",
+      "Condition": {
+        "ArnEquals": {
+          "ecs:cluster": "arn:aws:ecs:us-east-1:123456789012:cluster/blastgate-sandbox"
+        }
+      }
+    },
+    {
+      "Sid": "AllowRuntimeLogGroupFilter",
+      "Effect": "Allow",
+      "Action": "logs:FilterLogEvents",
+      "Resource": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/blastgate/*"
+    },
+    {
+      "Sid": "AllowRuntimeLogStreamWriteAndRead",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:GetLogEvents"
+      ],
+      "Resource": [
+        "arn:aws:logs:us-east-1:123456789012:log-group:/aws/blastgate/*:log-stream:*",
+        "arn:aws:logs:us-east-1:123456789012:log-group:/aws/bedrock-agentcore/*:log-stream:*"
+      ]
+    },
+    {
+      "Sid": "AllowRuntimeEcrRepoPull",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage"
+      ],
+      "Resource": "arn:aws:ecr:us-east-1:123456789012:repository/blastgate-*"
+    },
+    {
+      "Sid": "AllowRuntimeTelemetryAndEcrAuth",
+      "Effect": "Allow",
+      "Action": [
+        "ecs:DescribeServices",
+        "ecs:DescribeTasks",
+        "ecs:ListTasks",
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics",
+        "ecr:GetAuthorizationToken"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ExplicitlyDenyPrivilegeEscalationAndInfraMutation",
+      "Effect": "Deny",
+      "Action": [
+        "iam:*",
+        "sts:*",
+        "ec2:*",
+        "s3:*",
+        "organizations:*",
+        "account:*",
+        "billing:*",
+        "aws-portal:*",
+        "rds:*",
+        "ecs:Create*",
+        "ecs:Delete*",
+        "ecs:Update*",
+        "lambda:Create*",
+        "lambda:Delete*",
+        "lambda:Update*",
+        "dynamodb:CreateTable",
+        "dynamodb:DeleteTable"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

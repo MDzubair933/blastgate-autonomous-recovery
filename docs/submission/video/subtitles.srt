@@ -1,0 +1,111 @@
+1
+00:00:00,350 --> 00:00:03,500
+BlastGate investigates stalled workers while keeping execution authority outside the
+
+2
+00:00:03,500 --> 00:00:06,650
+model.
+
+3
+00:00:07,350 --> 00:00:11,000
+A container can keep running after its application stops making
+
+4
+00:00:11,000 --> 00:00:14,650
+progress. Restarting the wrong worker can make an incident worse.
+
+5
+00:00:15,350 --> 00:00:19,117
+Workers publish application health. The watchdog, CloudWatch alarm and EventBridge
+
+6
+00:00:19,117 --> 00:00:22,883
+route an incident to a dispatcher, which invokes the managed
+
+7
+00:00:22,883 --> 00:00:26,650
+Harness.
+
+8
+00:00:27,350 --> 00:00:31,450
+Amazon Nova Micro reasons inside AgentCore. Gateway and Cedar scope
+
+9
+00:00:31,450 --> 00:00:35,550
+its tools. An independent broker checks eight rules before a
+
+10
+00:00:35,550 --> 00:00:39,650
+scoped ECS task stop.
+
+11
+00:00:40,350 --> 00:00:44,117
+The recorded unattended run correlates an incident with a dispatch
+
+12
+00:00:44,117 --> 00:00:47,883
+session. The runner did not manually call the Harness or
+
+13
+00:00:47,883 --> 00:00:51,650
+broker, but could accelerate the watchdog.
+
+14
+00:00:52,350 --> 00:00:56,450
+The broker recorded ALLOW with all eight rule flags true.
+
+15
+00:00:56,450 --> 00:01:00,550
+The captured reason field contains the action identifier. We preserve
+
+16
+00:01:00,550 --> 00:01:04,650
+it without inventing a normalized result.
+
+17
+00:01:05,350 --> 00:01:10,117
+The original target stopped. A distinct replacement published healthy telemetry.
+
+18
+00:01:10,117 --> 00:01:14,883
+Cleanup recorded zero desired, running and pending workers. Intermediate timestamps
+
+19
+00:01:14,883 --> 00:01:19,650
+and a complete tool transcript are not retained.
+
+20
+00:01:20,350 --> 00:01:24,117
+This adversarial request targets an external service. The agent attempts
+
+21
+00:01:24,117 --> 00:01:27,883
+diagnostics and reports that the incident is missing. That is
+
+22
+00:01:27,883 --> 00:01:31,650
+the observed answer, not proof of a reached scope-validation branch.
+
+23
+00:01:32,350 --> 00:01:36,450
+This request asks for an unapproved infrastructure modification. The saved
+
+24
+00:01:36,450 --> 00:01:40,550
+Harness response is a Guardrail block. Model activity, blocked inputs
+
+25
+00:01:40,550 --> 00:01:44,650
+and model-generated answers remain distinct evidence categories.
+
+26
+00:01:45,350 --> 00:01:49,000
+The dashboard separates interactive simulated operations from recorded AWS evidence,
+
+27
+00:01:49,000 --> 00:01:52,650
+making each result and its limitations inspectable.
+
+28
+00:01:53,350 --> 00:01:59,650
+Independent authorization. A healthy replacement. BlastGate.

@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BlastGate Action Catalog Schema",
+  "description": "Authoritative schema for validating approved BlastGate remediation procedures and safety boundaries.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "catalog_version",
+    "last_updated",
+    "description",
+    "actions"
+  ],
+  "properties": {
+    "catalog_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "action_id",
+          "runbook_id",
+          "enabled",
+          "environment",
+          "aws_api",
+          "allowed_cluster",
+          "allowed_service",
+          "allowed_task_family",
+          "max_tasks_per_operation",
+          "max_authorized_replacements",
+          "cooldown_window_seconds",
+          "reference_desired_count",
+          "min_healthy_tasks",
+          "max_projected_unavailable_percent",
+          "requires_verified_unhealthy_state",
+          "requires_recent_telemetry",
+          "requires_stable_deployment",
+          "requires_recovery_verification",
+          "prohibited_environments"
+        ],
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "enum": [
+              "REPLACE_UNHEALTHY_ECS_WORKER"
+            ]
+          },
+          "runbook_id": {
+            "type": "string",
+            "pattern": "^RB-[A-Z0-9_-]+$"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "environment": {
+            "type": "string",
+            "enum": [
+              "sandbox"
+            ]
+          },
+          "aws_api": {
+            "type": "string",
+            "enum": [
+              "ecs:StopTask"
+            ]
+          },
+          "allowed_cluster": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "allowed_service": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "allowed_task_family": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "max_tasks_per_operation": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1
+          },
+          "max_authorized_replacements": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1
+          },
+          "cooldown_window_seconds": {
+            "type": "integer",
+            "minimum": 60,
+            "maximum": 3600
+          },
+          "reference_desired_count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "min_healthy_tasks": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "max_projected_unavailable_percent": {
+            "type": "number",
+            "minimum": 1.0,
+            "maximum": 100.0
+          },
+          "requires_verified_unhealthy_state": {
+            "type": "boolean"
+          },
+          "requires_recent_telemetry": {
+            "type": "boolean"
+          },
+          "requires_stable_deployment": {
+            "type": "boolean"
+          },
+          "requires_recovery_verification": {
+            "type": "boolean"
+          },
+          "prohibited_environments": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

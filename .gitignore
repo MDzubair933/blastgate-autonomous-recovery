@@ -1,0 +1,47 @@
+# Local/private workspace (public release is assembled from an allowlist)
+.local/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+.gemini/
+.scratch_pip/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+dist/
+cdk.out/
+*.zip
+release/
+*.log
+input.json
+
+# Original evidence and old account-only redactions remain private
+evidence/*
+!evidence/public/
+!evidence/public/**
+
+# Operational historical reports are retained locally, excluded from publication
+docs/STEP_*.md
+docs/BACKEND_HARDENING_VERIFICATION_REPORT.md
+docs/PHASE_3_DISPATCHER_DEPLOYMENT_CHECKPOINT.md
+docs/AWS_*.md
+docs/CDK_BOOTSTRAP_SECURITY_APPROVAL.md
+docs/AGENTCORE_MINIMAL_LIVE_PILOT_READINESS.md
+docs/*WINNERS*.md
+docs/HACKATHON_RULES_AND_ALTERNATIVES_AUDIT.md
+
+# Do not publish personal support artifacts or operational shell transcripts
+scripts/root_update_boundary_v3.sh
+
+# Stage 2: rendered video stays local until hosting is chosen
+media-exports/

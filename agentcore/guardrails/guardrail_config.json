@@ -1,0 +1,19 @@
+{
+  "name": "blastgate-operational-guardrail",
+  "deploymentStatus": "NOT_DEPLOYED_PLANNED",
+  "blockedInputMessaging": "Request blocked: Content violates BlastGate operational security and prompt-safety boundaries.",
+  "blockedOutputsMessaging": "Response blocked: Generated content violates BlastGate operational guardrails.",
+  "topics": [
+    "OperationalAuthorityOverride",
+    "UnauthorizedInfrastructureMutation"
+  ],
+  "contentFilters": [
+    "PROMPT_ATTACK",
+    "MISCONDUCT"
+  ],
+  "sensitiveInformationEntities": [
+    "AWS_ACCESS_KEY",
+    "AWS_SECRET_KEY",
+    "PASSWORD"
+  ]
+}
