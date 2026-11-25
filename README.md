@@ -8,15 +8,17 @@ An ECS task can remain `RUNNING` while its processing loop has stopped making pr
 
 ## Watch the 2-Minute Demo
 
+*120-second narrated technical walkthrough with burned subtitles. It uses historical recorded AWS evidence, architecture animation, and offline dashboard views; it does not show live AWS telemetry.*
+
 <p align="center">
   <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/">
-    <img src="docs/submission/assets/cover-1200x675.png" alt="Play the BlastGate 2-minute demo" width="900">
+    <img src="docs/submission/assets/cover-1200x675.png" alt="Play the BlastGate 2-minute demo" width="760">
   </a>
   <br>
-  <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/"><strong>▶ Open the full-size, centered video player</strong></a>
+  <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/"><strong>▶ Open the full video</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://youtu.be/WtddIVtfIfk">Watch on YouTube</a>
 </p>
-
-*120-second narrated technical walkthrough with burned subtitles. The demonstration uses historical recorded AWS evidence, architecture animation, and offline dashboard views; it does not show live AWS telemetry.*
 
 ## Recorded result
 
@@ -39,7 +41,8 @@ The runner does not manually invoke the harness or broker. It **can invoke the w
 
 ## Video materials
 
-- **Full-size player:** [Open the centered demo player](https://mdzubair933.github.io/blastgate-autonomous-recovery/)
+- **Full-size player:** [Open the full video](https://mdzubair933.github.io/blastgate-autonomous-recovery/)
+- **YouTube:** [Watch the demo](https://youtu.be/WtddIVtfIfk)
 - **Video frames contact sheet:** [docs/submission/assets/final/video-frames/contact-sheet.png](docs/submission/assets/final/video-frames/contact-sheet.png)
 - **Storyboard and narration script:** [docs/submission/video/STORYBOARD.md](docs/submission/video/STORYBOARD.md)
 - **Visual gallery & frame contacts:** [docs/submission/GALLERY.md](docs/submission/GALLERY.md)
