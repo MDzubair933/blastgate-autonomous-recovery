@@ -9,21 +9,25 @@
     :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #0b1020; color: #f3f6fc; }
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 28px 16px; }
-    main { width: min(1120px, 100%); text-align: center; }
-    h1 { margin: 0 0 18px; font-size: clamp(1.5rem, 3vw, 2.25rem); }
-    video { display: block; width: 100%; max-height: 78vh; aspect-ratio: 16 / 9; margin: 0 auto; background: #000; border: 1px solid #293449; border-radius: 12px; object-fit: contain; }
-    p { margin: 16px auto 0; max-width: 760px; color: #bbc6d8; line-height: 1.6; }
+    main { width: min(900px, 100%); text-align: center; }
+    h1 { margin: 0 0 14px; font-size: clamp(1.5rem, 3vw, 2.25rem); }
+    .description { margin: 0 auto 18px; max-width: 760px; color: #bbc6d8; line-height: 1.6; }
+    video { display: block; width: 100%; max-height: 72vh; aspect-ratio: 16 / 9; margin: 0 auto; background: #000; border: 1px solid #293449; border-radius: 12px; object-fit: contain; }
+    .actions { margin: 16px auto 0; }
     a { color: #8ab4ff; }
+    .button { display: inline-block; padding: 10px 16px; border: 1px solid #3b82f6; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .button:hover { background: #14264a; }
   </style>
 </head>
 <body>
   <main>
     <h1>BlastGate — 2-Minute Technical Demo</h1>
+    <p class="description">120-second narrated technical walkthrough with burned subtitles. It uses historical recorded AWS evidence, architecture animation, and offline dashboard views; it does not show live AWS telemetry.</p>
     <video controls playsinline preload="metadata" aria-label="BlastGate two-minute technical demonstration">
       <source src="./blastgate-demo-120s.mp4" type="video/mp4">
       Your browser does not support HTML video playback.
     </video>
-    <p>120-second narrated technical walkthrough with burned subtitles. It uses historical recorded AWS evidence, architecture animation, and offline dashboard views; it does not show live AWS telemetry.</p>
+    <p class="actions"><a class="button" href="https://youtu.be/WtddIVtfIfk">Open the full video on YouTube</a></p>
   </main>
 </body>
 </html>
