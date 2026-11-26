@@ -18,8 +18,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "620e3fe5117b4da4235512ca9e62179dfe29666efc8243a82e11cc1ab715ed73",
-      "bytes": 7598
+      "sha256": "35c4a592a5463c4c0667ac395a579a9463e3be6d0f77a5d8e4d5a791e212acd8",
+      "bytes": 7449
     },
     {
       "path": "agentcore/__init__.py",
@@ -548,8 +548,8 @@
     },
     {
       "path": "docs/submission/GITHUB_FILE_INVENTORY.md",
-      "sha256": "51949c417c7446c5a909c541bf9d722e2b83ee9323551ba19d6bcaca8d68f2c7",
-      "bytes": 12877
+      "sha256": "cf27276c72d125c70867859f672a9b5c9126324b84ff6bd56d57e1637a4ca635",
+      "bytes": 12684
     },
     {
       "path": "docs/submission/MEDIA_PROVENANCE.json",
@@ -740,6 +740,11 @@
       "path": "docs/submission/assets/overview-simulated.png",
       "sha256": "2b54284ce1ddf3e340e5a2a29341b2105536460a1bbc9da5a33e387758063c93",
       "bytes": 507688
+    },
+    {
+      "path": "docs/submission/assets/readme-demo.svg",
+      "sha256": "3ac234dc2d3f6889a0f95d2e3dd62d4adfcdd5219a306518e689bcd75c5b7a32",
+      "bytes": 1148
     },
     {
       "path": "docs/submission/assets/recorded-recovery.png",

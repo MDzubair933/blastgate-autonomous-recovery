@@ -1,6 +1,6 @@
 # Exact proposed GitHub file inventory — Stage 2 media update
 
-296 curated repository paths. The MP4 export is intentionally outside this tree and normal Git tracking. The reviewed Stage 1 tree is preserved; only Stage 2 media/docs, renderer helpers, README media links and the export ignore were overlaid.
+297 curated repository paths. The MP4 export is intentionally outside this tree and normal Git tracking. The reviewed Stage 1 tree is preserved; only Stage 2 media/docs, renderer helpers, README media links and the export ignore were overlaid. A later local README presentation pass adds one compact demo SVG.
 
 The root PUBLIC_MANIFEST.json contains content hashes and byte sizes (excluding its own recursive hash).
 
@@ -129,6 +129,7 @@ The root PUBLIC_MANIFEST.json contains content hashes and byte sizes (excluding 
 | `docs/submission/assets/agentcore-recorded-execution.png` |
 | `docs/submission/assets/architecture.png` |
 | `docs/submission/assets/architecture.svg` |
+| `docs/submission/assets/readme-demo.svg` |
 | `docs/submission/assets/cover-1200x675.png` |
 | `docs/submission/assets/cover.svg` |
 | `docs/submission/assets/final/01-agentcore-recorded.png` |

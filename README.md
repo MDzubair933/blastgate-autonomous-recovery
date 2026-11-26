@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://mdzubair933.github.io/blastgate-autonomous-recovery/">
-    <img src="docs/submission/assets/cover-1200x675.png" alt="BlastGate — Autonomous recovery. Provable boundaries. Open the two-minute demo." width="760">
+    <img src="docs/submission/assets/readme-demo.svg" alt="BlastGate — Autonomous recovery. Provable boundaries. Open the two-minute demo." width="100%">
   </a>
 </p>
 

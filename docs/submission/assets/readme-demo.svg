@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+<title id="title">BlastGate — Autonomous recovery. Provable boundaries.</title>
+<desc id="desc">Open the two-minute narrated demonstration.</desc>
+<rect width="1200" height="440" fill="#0b0f14"/>
+<path d="M60 91 L80 49 H90 L70 91Z M83 91 L103 49 H113 L93 91Z" fill="#d8a955"/>
+<text x="138" y="82" font-family="Arial,sans-serif" font-size="29" font-weight="600" fill="#f5f4f1">BLASTGATE</text>
+<text x="60" y="205" font-family="Arial,sans-serif" font-size="63" fill="#f5f4f1">Autonomous recovery.</text>
+<text x="60" y="281" font-family="Arial,sans-serif" font-size="63" fill="#d8a955">Provable boundaries.</text>
+<text x="64" y="366" font-family="Arial,sans-serif" font-size="27" fill="#b5b8bd">The agent proposes. The broker decides.</text>
+<circle cx="1040" cy="220" r="64" fill="none" stroke="#d8a955" stroke-width="2"/>
+<path d="M1025 191 L1065 220 L1025 249Z" fill="#d8a955"/>
+<text x="1040" y="325" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#f5f4f1">2-minute demo</text>
+</svg>
